@@ -1,5 +1,5 @@
-#N canvas 676 0 681 716 12;
-#X obj 217 223 delwrite~ eco 20000;
+#N canvas 659 86 681 461 12;
+#X obj 216 209 delwrite~ eco 20000;
 #X obj 219 291 delread~ eco;
 #X obj 39 131 noise~;
 #X obj 196 46 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
