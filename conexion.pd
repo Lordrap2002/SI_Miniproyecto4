@@ -4,7 +4,7 @@
 #X msg 36 24 listen 2002;
 #X obj 214 139 tgl 19 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 112 192 print;
-#X obj 40 377 dac~ 1 2;
+#X obj 39 476 dac~ 1 2;
 #X obj 36 156 route oscControl;
 #X obj 36 121 list trim;
 #X floatatom 214 99 5 0 0 0 - - - 0;
@@ -70,12 +70,12 @@
 #X obj 2360 139 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 2497 138 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 2632 138 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
-#X obj 39 334 *~;
+#X obj 38 433 *~;
 #X obj 2222 180 t b b;
 #X obj 2222 238 line~;
 #X obj 2222 296 *~;
 #X msg 2222 209 1 \, 0 500;
-#X obj 57 302 r volume;
+#X obj 56 401 r volume;
 #X obj 2360 179 t b b;
 #X obj 2360 237 line~;
 #X obj 2360 295 *~;
@@ -362,6 +362,14 @@
 #X obj 3244 988 s fr28;
 #X floatatom 3040 225 5 0 0 0 - - - 0;
 #X floatatom 3016 885 5 0 0 0 - - - 0;
+#X obj 38 323 lop~;
+#X obj 37 376 hip~;
+#X obj 62 350 r hi;
+#X obj 63 296 r lo;
+#X obj 1386 309 * 5000;
+#X obj 1457 189 * 5000;
+#X obj 1386 347 s hi;
+#X obj 1457 229 s lo;
 #X connect 0 0 1 0;
 #X connect 1 0 7 0;
 #X connect 2 0 0 0;
@@ -403,6 +411,8 @@
 #X connect 38 0 43 0;
 #X connect 38 0 44 0;
 #X connect 39 0 40 0;
+#X connect 40 0 367 0;
+#X connect 41 0 368 0;
 #X connect 42 0 41 0;
 #X connect 43 0 39 0;
 #X connect 44 0 42 0;
@@ -509,7 +519,7 @@
 #X connect 138 0 139 0;
 #X connect 139 0 119 0;
 #X connect 141 0 118 0;
-#X connect 151 0 71 0;
+#X connect 151 0 363 0;
 #X connect 152 0 154 0;
 #X connect 153 0 152 0;
 #X connect 154 0 155 0;
@@ -719,3 +729,9 @@
 #X connect 362 0 350 0;
 #X connect 362 0 351 0;
 #X connect 362 0 352 0;
+#X connect 363 0 364 0;
+#X connect 364 0 71 0;
+#X connect 365 0 364 1;
+#X connect 366 0 363 1;
+#X connect 367 0 369 0;
+#X connect 368 0 370 0;
